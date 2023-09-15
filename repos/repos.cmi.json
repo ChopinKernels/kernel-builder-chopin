@@ -2,7 +2,7 @@
   {
     "kernelSource": {
       "name": "bxsj-KernelSU-Proton-release",
-      "repo": "https://github.com/MiCode/Xiaomi_Kernel_OpenSource",
+      "repo": "https://github.com/Xiaomi-Chopin-Device/kernel_xiaomi_chopin",
       "branch": "chopin-r-oss",
       "device": "chopin",
       "defconfig": "chopin_user_defconfig"
