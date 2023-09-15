@@ -37,10 +37,10 @@
       }
     },
     "AnyKernel3": {
-      "use": true,
-      "release": true,
+      "use": false,
+      "release": false,
       "repo": "https://github.com/wdnmdkiki/AnyKernel3/",
-      "branch": "thyme"
+      "branch": "main"
     }
   }
 ]
