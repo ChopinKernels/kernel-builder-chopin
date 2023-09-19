@@ -2,8 +2,8 @@
   {
     "kernelSource": {
       "name": "bxsj-KernelSU-Proton-release",
-      "repo": "https://github.com/liangsai12/chopin",
-      "branch": "chopin-r-oss",
+      "repo": "https://github.com/AOSP-13-Mediatek/kernel_xiaomi_chopin",
+      "branch": "r",
       "device": "chopin",
       "defconfig": "chopin_user_defconfig"
     },
