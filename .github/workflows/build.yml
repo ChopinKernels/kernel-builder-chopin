@@ -207,7 +207,25 @@ jobs:
           echo -e "CONFIG_KPROBE_EVENTS=y" >> arch/${{ env.arch }}/configs/${{ env.DEFCONFIG_NAME }}
 
           cat arch/${{ env.arch }}/configs/${{ env.DEFCONFIG_NAME }}
+      - name: 开启lxc和docker配置
+        working-directory: ${{ env.KERNEL_NAME }}
+        run: |
+          wget https://github.com/fate-think/LXC-DOCKER-KernelSU_Action/releases/download/1.0.0/add-lxc-docker-custom.sh
+          chmod 755 add-lxc-docker-custom.sh
+          ./add-lxc-docker-custom.sh arch/${{ env.arch }}/configs/${{ env.DEFCONFIG_NAME }}
+          echo "# CONFIG_ANDROID_PARANOID_NETWORK is not set" >> arch/${{ env.arch }}/configs/${{ env.DEFCONFIG_NAME }}
 
+      - name: 添加runc补丁
+        working-directory: ${{ env.KERNEL_NAME }}
+        run: |
+          wget https://github.com/fate-think/LXC-DOCKER-KernelSU_Action/releases/download/1.0.0/runcpatch.sh
+          chmod a+x runcpatch.sh
+          if [ -f kernel/cgroup.c ]; then
+          ./runcpatch.sh kernel/cgroup.c               
+          fi
+          if [ -f kernel/cgroup/cgroup.c ]; then
+          ./runcpatch.sh kernel/cgroup/cgroup.c               
+          fi
       - name: "👍 Make defconfig"
         working-directory: ${{ env.KERNEL_NAME }}
         env:
