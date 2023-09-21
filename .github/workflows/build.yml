@@ -212,7 +212,7 @@ jobs:
         env:
           arch: ${{ steps.generate-args.outputs.ARCH }}
         run: |
-          wget https://github.com/fate-think/LXC-DOCKER-KernelSU_Action/releases/download/1.0.0/add-lxc-docker-custom.sh
+          wget https://github.com/liangsai12/Android-Kernel-Builder-chopin/releases/download/1.0.0/add-lxc-docker-custom.sh
           chmod 755 add-lxc-docker-custom.sh
           ./add-lxc-docker-custom.sh arch/${{ env.arch }}/configs/${{ env.DEFCONFIG_NAME }}
           echo "# CONFIG_ANDROID_PARANOID_NETWORK is not set" >> arch/${{ env.arch }}/configs/${{ env.DEFCONFIG_NAME }}
