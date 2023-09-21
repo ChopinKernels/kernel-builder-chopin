@@ -209,6 +209,8 @@ jobs:
           cat arch/${{ env.arch }}/configs/${{ env.DEFCONFIG_NAME }}
       - name: 开启lxc和docker配置
         working-directory: ${{ env.KERNEL_NAME }}
+        env:
+          arch: ${{ steps.generate-args.outputs.ARCH }}
         run: |
           wget https://github.com/fate-think/LXC-DOCKER-KernelSU_Action/releases/download/1.0.0/add-lxc-docker-custom.sh
           chmod 755 add-lxc-docker-custom.sh
