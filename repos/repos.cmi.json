@@ -4,8 +4,8 @@
       "name": "Test-K40G-AndroidT-Proton-release",
       "repo": "https://github.com/ChopinKernels/android_kernel_aresin",
       "branch": "T",
-      "device": "ares",
-      "defconfig": "ares_user_defconfig"
+      "device": "chopin",
+      "defconfig": "chopin_user_defconfig"
     },
     "withKernelSU": false,
     "toolchains": [
