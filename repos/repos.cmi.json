@@ -1,19 +1,21 @@
 [
   {
     "kernelSource": {
-      "name": "bxsj-KernelSU-Proton-release",
-      "repo": "https://github.com/AOSP-13-Mediatek/kernel_xiaomi_chopin",
-      "branch": "r",
-      "device": "chopin",
-      "defconfig": "chopin_user_defconfig"
+      "name": "Test-K40G-AndroidS-Proton-release",
+      "repo": "https://github.com/ChopinKernels/kernel_xiaomi_ares",
+      "branch": "S",
+      "device": "ares",
+      "defconfig": "ares_user_defconfig"
     },
-    "withKernelSU": true,
+    "withKernelSU": false,
     "toolchains": [
       {
         "repo": "https://github.com/kdrag0n/proton-clang",
         "branch": "master",
         "name": "proton-clang",
-        "binPath": ["bin"]
+        "binPath": [
+          "bin"
+        ]
       }
     ],
     "ccache": false,
