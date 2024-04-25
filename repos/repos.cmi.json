@@ -1,9 +1,9 @@
 [
   {
     "kernelSource": {
-      "name": "Test-K40G-AndroidS-Proton-release",
-      "repo": "https://github.com/ChopinKernels/kernel_xiaomi_ares",
-      "branch": "S",
+      "name": "Test-K40G-AndroidT-Proton-release",
+      "repo": "https://github.com/ChopinKernels/android_kernel_aresin",
+      "branch": "T",
       "device": "ares",
       "defconfig": "ares_user_defconfig"
     },
