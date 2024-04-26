@@ -265,23 +265,13 @@ jobs:
           if-no-files-found: ignore
           retention-days: 7
 
-      - name: "💜 Upload dtb"
+      - name: "💜 Upload all"
         uses: actions/upload-artifact@v3
         env:
           arch: ${{ steps.generate-args.outputs.ARCH }}
         with:
-          name: dtb-${{ env.KERNEL_DEVICE }}-${{ env.KERNEL_NAME }}-${{ env.builddate }}
-          path: ${{ env.OUT_DIR }}/arch/${{ env.arch }}/boot/Image.gz-dtb
-          if-no-files-found: ignore
-          retention-days: 7
-
-      - name: "❤️ Upload dtbo.img"
-        uses: actions/upload-artifact@v3
-        env:
-          arch: ${{ steps.generate-args.outputs.ARCH }}
-        with:
-          name: dtbo.img-${{ env.KERNEL_DEVICE }}-${{ env.KERNEL_NAME }}-${{ env.builddate }}
-          path: ${{ env.OUT_DIR }}/arch/${{ env.arch }}/boot/dts/mediatek/chopin.dtb
+          name: all-${{ env.KERNEL_DEVICE }}-${{ env.KERNEL_NAME }}-${{ env.builddate }}
+          path: ${{ env.OUT_DIR }}/arch/${{ env.arch }}/boot/
           if-no-files-found: ignore
           retention-days: 7
 
