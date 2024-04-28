@@ -1,13 +1,13 @@
 [
   {
     "kernelSource": {
-      "name": "Chopin-AndroidS-kernelSU-Proton-release",
+      "name": "Chopin-AndroidS-KVM-Proton-release",
       "repo": "https://github.com/ChopinKernels/kernel_xiaomi_chopin_android_S",
       "branch": "S",
       "device": "chopin",
       "defconfig": "chopin_userkvm_defconfig"
     },
-    "withKernelSU": true,
+    "withKernelSU": false,
     "toolchains": [
       {
         "repo": "https://github.com/kdrag0n/proton-clang",
