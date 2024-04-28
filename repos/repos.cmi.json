@@ -5,7 +5,7 @@
       "repo": "https://github.com/ChopinKernels/kernel_xiaomi_chopin_android_S",
       "branch": "S",
       "device": "chopin",
-      "defconfig": "chopin_user_defconfig_kvm"
+      "defconfig": "chopin_userkvm_defconfig"
     },
     "withKernelSU": true,
     "toolchains": [
