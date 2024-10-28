@@ -1,11 +1,11 @@
 [
   {
     "kernelSource": {
-      "name": "Test-K40G-AndroidS-Proton-release",
-      "repo": "https://github.com/ChopinKernels/kernel_xiaomi_ares",
-      "branch": "S",
-      "device": "chopin",
-      "defconfig": "chopin_user_defconfig"
+      "name": "pdx206-crDroid-kernel-Proton-release",
+      "repo": "https://github.com/ChopinKernels/kernel_sony_sm8250",
+      "branch": "cr-14",
+      "device": "pdx206",
+      "defconfig": "pdx206_defconfig"
     },
     "withKernelSU": false,
     "toolchains": [
